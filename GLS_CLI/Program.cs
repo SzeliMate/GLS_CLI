@@ -46,12 +46,27 @@ namespace GLS_CLI
             Console.WriteLine($"Különböző sofőrök száma: {sofőrök.Count}");
 
             Console.WriteLine("4.Feladat");
-            int osszKm = 0;
+            double osszKm = 0;
             foreach (var kliens in adatok)
             {
                 osszKm += kliens.km;
             }
             Console.WriteLine($"Az összes megtett kilométer: {osszKm} km");
+
+            Console.WriteLine("5.Feladat");
+
+            double osszFogyasztas = 0;
+
+            foreach (var kliens in adatok)
+            {
+                osszKm += kliens.km;
+                osszFogyasztas += kliens.fogyasztas;
+            }
+
+            double atlagosFogyasztas = (osszFogyasztas / osszKm) * 100;
+            Console.WriteLine($"Átlagos fogyasztás: {atlagosFogyasztas} liter/100 km");
+
+
 
         }
     }

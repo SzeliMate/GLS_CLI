@@ -34,6 +34,17 @@ namespace GLS_CLI
             }
             Console.WriteLine("2.Feladat:");
             Console.WriteLine($"Az autó használatban töltött napjainak száma: {egyediNapok.Count}");
+
+            Console.WriteLine("3.Feladat");
+
+            HashSet<string> sofőrök = new HashSet<string>();
+            foreach (var kliens in adatok)
+            {
+                sofőrök.Add(kliens.sofornev);
+            }
+
+            Console.WriteLine($"Különböző sofőrök száma: {sofőrök.Count}");
+
         }
     }
 }

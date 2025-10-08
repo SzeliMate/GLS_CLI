@@ -22,10 +22,18 @@ namespace GLS_CLI
                 }
             }
 
+            Console.WriteLine("1.Feladat:");
             foreach (var kliens in adatok)
             {
                 Console.WriteLine(kliens);
             }
+            HashSet<string> egyediNapok = new HashSet<string>();
+            foreach (var kliens in adatok)
+            {
+                egyediNapok.Add(kliens.datum);
+            }
+            Console.WriteLine("2.Feladat:");
+            Console.WriteLine($"Az autó használatban töltött napjainak száma: {egyediNapok.Count}");
         }
     }
 }
